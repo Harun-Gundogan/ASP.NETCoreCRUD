@@ -1,0 +1,57 @@
+﻿@model Video_icerik.Models.Icerik
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Icerik</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="mb-3">
+                <label asp-for="YouTubeVideoId" class="control-label"></label>
+                <input asp-for="YouTubeVideoId" class="form-control" />
+                <span asp-validation-for="YouTubeVideoId" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Baslik" class="control-label"></label>
+                <input asp-for="Baslik" class="form-control" />
+                <span asp-validation-for="Baslik" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="UretimTarihi" class="control-label"></label>
+                <input asp-for="UretimTarihi" class="form-control" />
+                <span asp-validation-for="UretimTarihi" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="EgitmeninNotlari" class="control-label"></label>
+                <input asp-for="EgitmeninNotlari" class="form-control" />
+                <span asp-validation-for="EgitmeninNotlari" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="KullanilanTeknolojiler" class="control-label"></label>
+                <input asp-for="KullanilanTeknolojiler" class="form-control" />
+                <span asp-validation-for="KullanilanTeknolojiler" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Kategori" class="control-label"></label>
+                <input asp-for="Kategori" class="form-control" />
+                <span asp-validation-for="Kategori" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <button type="submit" value="Create" class="btn btn-primary">Create</button> |
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
